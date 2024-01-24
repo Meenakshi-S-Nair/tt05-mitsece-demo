@@ -8,3 +8,14 @@ module tt_um_seven_segment_seconds #( parameter MAX_COUNT = 24'd10_000_000 ) (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
+assign uio_out = 8'h00;
+assign uio_oe  = 8'h00;
+    assign uo_out[7:2]=4'b0000;
+
+ha ha  (
+    .a(ui_in[0]),
+    .b(ui_in[1]),
+    .sum(uo_out[0]),
+    .carry(uo_out[1])
+);
+endmodule
